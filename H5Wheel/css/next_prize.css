@@ -1,0 +1,25 @@
+body {
+    width: auto;
+    height: auto;
+    background:rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding: 0px;
+    filter:alpha(Opacity=50);
+}
+.back {
+    width: 640px;
+    height: 640px;
+    background: url(../images/prize_back_next.png)
+    no-repeat 0 0;
+    margin: 0 auto;
+}
+h4 {
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    left: 25%;
+    top: 35%;
+    color: #480000;
+    font-size: 13px;
+}

@@ -1,0 +1,73 @@
+body {
+    width: auto;
+    height: auto;
+    background:rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding: 0px;
+    filter:alpha(Opacity=50);
+    align-items: center;
+}
+.back {
+    width: 640px;
+    height: 640px;
+    background-image: url("../images/prize_back.png");
+
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.prize {
+    width: 330px;
+    height: 240px;
+    background-image: url(../images/first_prize.png);
+
+    position: relative;
+    top: 31.5%;
+    left: 24%;
+}
+
+h4 {
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    color: #480000;
+    font-size: 13px;
+}
+#mycanvas {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 28%;
+    top: 140px;
+    margin: 0 auto;
+}
+#prize {
+    width: auto;
+    height: auto;
+    color: #e72342;
+    font-size: 14px;
+    position: relative;
+    left: 25%;
+    top: 35%;
+}
+.next{
+
+    width: 223px;
+    height: 62px;
+    position: relative;
+    top: 18%;
+    left: 33%;
+    background-image: url("../images/next.png");
+}
+
+.hover {
+    width: 223px;
+    height: 62px;
+    position: relative;
+    top: 18%;
+    left: 33%;
+    background-image: url("../images/next_select.png");
+}

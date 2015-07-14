@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <link type="text/css" href="css/prize.css" rel="stylesheet">
+    <script src="js/prize.js"></script>
+    <script type="text/javascript" charset = "utf-8">
+        $(function(){
+            var canvas = document.getElementById('mycanvas');
+            consol(canvas);
+            var ctx=canvas.getContext('2d');
+            ctx.font = "14px  黑体";
+            ctx.fillStyle="#480000";
+            ctx.fillText("恭喜您！获得",20,100);
+            ctx.font = "25px  黑体";
+            ctx.fillStyle='#e72342';
+            ctx.fillText(txt,105,100);
+            ctx.font = "14px  黑体";
+            ctx.fillStyle='#480000';
+            ctx.fillText(arrText[index],180,100);
+            consol(arrText[index]);
+       });
+
+    </script>
+</head>
+<body>
+    <div class="back">
+        <div class="prize" id="prize-back">
+
+        </div>
+        <canvas id="mycanvas"  ></canvas>
+        <h4 id="text-prize" align="center"></h4>
+        <div class="next" id="next" ></div>
+    </div>
+</body>
+</html>

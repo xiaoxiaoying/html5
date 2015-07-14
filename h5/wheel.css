@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    background-color:#f4e53c;
+
+}
+.turntable-bg {
+    background: url("image/back1.png");
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.turntable-bg.wheel_back {
+    background: url("image/wheel_foot.png") ;
+    position: relative;
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+}
+.turntable-bg.wheel_back.pointer {
+    width: 174px;
+    height: 228px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -67px;
+    margin-top: -144px;
+    z-index: 8;
+}
+.turntable-bg.wheel_back.rotate {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    left: 116px;
+    top: 60px;
+}

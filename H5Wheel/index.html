@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <script  type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jQueryRotate.js"></script>
+    <link href="css/wheel.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/prize.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //获得系统宽高
+            var windowWidth = document.documentElement.clientWidth;
+            var windowHeight = document.documentElement.clientHeight;
+
+
+            var bRotate = false;
+        var rotateFn = function (awards, angles, txt){
+            bRotate = !bRotate;
+
+            $('.pointer').stopRotate();
+            $('.pointer').rotate({
+                angle:0,
+                animateTo:angles+1800,
+                duration:8000,
+                callback:function (){
+//                    alert(txt);
+//                    window.location.href='winning.html';
+
+                    window.open ("winning.html", "newwindow2", "height=100, width=100, top=100, left=100,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
+//                    window.open ("winning.html");
+                    setPrize(3,txt);
+
+                    bRotate = !bRotate;
+                }
+            })
+        };
+
+
+//            使用Jquery加载弹窗
+            function loadPopup(){
+                //仅在开启标志popupStatus为0的情况下加载
+                if(popupStatus==0){
+                    $("#backgroundPopup").css({
+                        "opacity": "0.7"
+                    });
+                    $("#backgroundPopup").fadeIn("slow");
+                    $("#popupContact").fadeIn("slow");
+                    popupStatus = 1;
+                }
+            }
+
+//            关闭/去除弹出窗口的函数：
+
+            //使用Jquery去除弹窗效果
+            function disablePopup(){
+                //仅在开启标志popupStatus为1的情况下去除
+                if(popupStatus==1){
+                    $("#backgroundPopup").fadeOut("slow");
+                    $("#popupContact").fadeOut("slow");
+                    popupStatus = 0;
+                }
+            }
+
+            //将弹出窗口定位在屏幕的中央
+
+            function centerPopup(){
+
+//获取系统变量
+
+                var windowWidth = document.documentElement.clientWidth;
+
+                var windowHeight = document.documentElement.clientHeight;
+
+
+
+//居中设置
+
+                $("#popupContact").css({
+
+                    "position": "absolute",
+
+                    "top": windowHeight/2-popupHeight/2,
+
+                    "left": windowWidth/2-popupWidth/2
+
+                });
+
+//以下代码仅在IE6下有效
+
+                $("#backgroundPopup").css({
+
+                    "height": windowHeight
+
+                });
+
+            }
+
+
+            $('.button-text').click(function (){
+            //调用函数居中窗口
+
+            centerPopup();
+
+            //调用函数加载窗口
+
+            loadPopup();
+
+                console.log("点击了！");
+            if(bRotate)return;
+            var item = rnd(0,7);
+
+            switch (item) {
+                case 0:
+                    //var angle = [26, 88, 137, 185, 235, 287, 337];
+                    rotateFn(0, 120, '五等奖');
+                    break;
+                case 1:
+                    //var angle = [88, 137, 185, 235, 287];
+                    rotateFn(1, 155, '六等奖');
+                    break;
+                case 2:
+                    //var angle = [137, 185, 235, 287];
+                    rotateFn(2, 75, '一等奖');
+                    break;
+                case 3:
+                    //var angle = [137, 185, 235, 287];
+                    rotateFn(3, 23, '六等奖');
+                    break;
+                case 4:
+                    //var angle = [185, 235, 287];
+                    rotateFn(4, 335, '四等奖');
+                    break;
+                case 5:
+                    //var angle = [185, 235, 287];
+                    rotateFn(5, 295, '二等奖');
+                    break;
+                case 6:
+                    //var angle = [235, 287];
+                    rotateFn(6, 250, '六等奖');
+                    break;
+                case 7:
+                    //var angle = [287];
+                    rotateFn(7, 205, '三等奖');
+                    break;
+            }
+
+            console.log(item);
+        });
+        });
+        function rnd(n, m){
+            return Math.floor(Math.random()*(m-n+1)+n)
+        }
+    </script>
+</head>
+<body >
+        <div class="head-top" >
+            <!--<div class="img-back">-->
+            <!--<img id="head-top" src="images/back1.png" width="100%" >-->
+            <!--</div>-->
+
+            <div class="action_back">
+                <div class="wheel-back">
+
+                <div class="pointer">
+                </div>
+                <div class="rotate">
+
+                    <div class="button-text">
+                    </div>
+                </div>
+
+
+                </div>
+                <div class="action-people">
+
+                </div>
+                <div class="number-back">
+                <div class="number" align="center" >
+                    <img src="images/0.png" id="zero" width="21">
+                    <img src="images/0.png" id="one" width="21">
+                    <img src="images/0.png" id="two" width="21">
+                    <img src="images/0.png" id="three" width="21">
+                    <img src="images/0.png" id="four" width="21">
+                    <img src="images/0.png" id="five" width="21">
+                    <img src="images/0.png" id="six" width="21">
+                    <img src="images/0.png" id="seven" width="21">
+                </div>
+                </div>
+                <div class="prize-people" >
+
+                </div>
+            </div>
+        </div>
+
+        <div class="prize-setting">
+            <div class="prize">
+                <img src="images/prize_setting.png">
+            </div>
+        </div>
+
+        <div class="action-back">
+            <div class="action">
+                <img src="images/action.png">
+            </div>
+            <h4>1、凡注册“艺友”会员的用户皆可参与一次抽奖，实物中奖后按照流程填写相关信息；</h4>
+            <h4>2、中虚拟奖品（100积分），积分会自动添加到个人空间的“我的积分”中；</h4>
+            <h4>3、实物奖品我们会在2015年5月10日前统一邮寄给您。</h4>
+            <h4>4、收到实物奖品后，人和奖品拍照合影，并把照片发给我们的客服人员，证实奖品已收到，客服QQ：1452254027</h4>
+            <h4 class="h">备注：奖品以所收实物为准（可能存在颜色等区别，不予退换）</h4>
+        </div>
+        <div class="footer">
+            <h3 align="center">最终解释权归 杭州初始网络科技有限公司</h3>
+            <h3 align="center">咨询电话：0571-85395298-857</h3>
+        </div>
+
+
+        <div id="button"><input type="submit" value="点击这里查看效果" /></div>
+
+        <div id="popupContact">
+
+            <a id="popupContactClose">[X]</a>
+
+            <h1>标题</h1>
+
+            <input id="Text1" type="text" /><br />
+            <input id="Text2" type="text" />
+
+        </div>
+
+        <div id="backgroundPopup"></div>
+</body>
+</html>

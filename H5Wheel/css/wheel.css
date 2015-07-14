@@ -1,0 +1,229 @@
+
+body{
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: #f4e53c;
+}
+.head-top{
+    width: 100%;
+    height: 1060px;
+    margin: 0px auto;
+    padding: 0px;
+    position: relative;
+    /*position: absolute;*/
+    background-image: url("../images/back1.png");
+    background-size:cover;
+    -webkit-background-size: cover;
+    /* //兼容Webkit内核浏览器如Chrome和Safari */
+    /*兼容Opera */
+    -o-background-size: cover;
+}
+.head-top:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.img-back {
+    position: absolute;
+}
+#head-top {
+    /*position: absolute;*/
+    position: relative;
+}
+.action_back{
+    /*position: absolute;*/
+    position: relative;
+    margin: 0px auto;
+    /*top: inherit;*/
+    top: 26%;
+
+}
+.wheel-back {
+    position: relative;
+    width: 503px;
+    height: 556px;
+    margin: 0px auto;
+    background-image: url("../images/wheel_foot.png");
+    overflow:hidden;
+    top: 26%;
+}
+ .rotate{
+    width: 503px;
+    height: 556px;
+    background: url(../images/button.png)
+    no-repeat 0 0;
+    position: relative;
+    background-size:100%;
+}
+.pointer{
+    width: 503px;
+    height: 503px;
+    position: absolute;
+    margin: 0 auto;
+    background: url(../images/wheel.png)
+    no-repeat 0 0;
+    float:left;
+}
+
+.footer {
+    width:auto;
+    height: auto;
+    position: relative;
+    color: #625a05;
+    padding: 40px;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-text {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    background: url(../images/button_text.png)
+    no-repeat 0 0;
+    top: 34.5%;
+    left: 37%;
+}
+
+.prize-setting {
+    position: relative;
+    width: 100%;
+    height: 1060px;
+    margin: 0px auto;
+    padding: 0px;
+    background-image: url("../images/prize.png");
+    background-size: cover;
+}
+
+.prize {
+    width: auto;
+    position: relative;
+    height: auto;
+    margin: 0px;
+    top: 45px;
+}
+
+.action-back {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    margin: 0 auto;
+    background-image: url("../images/action_back.png");
+    background-size: cover;
+}
+
+
+.action {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 0px;
+    top: 45px;
+}
+h4 {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 45px;
+    top: 60px;
+    font-size: 13px;
+    word-wrap: break-word;
+    margin-right:80px;
+    color: #333;
+}
+.h {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    color: red;
+    left: 110px;
+}
+
+.action-people {
+    width: 210px;
+    height: 40px;
+    position: relative;
+    background-image: url("../images/number.png");
+    left: 10%;
+}
+
+.number{
+    background-image: url("../images/number_back.png");
+    width: 280px;
+    height: 40px;
+    overflow:hidden;
+    align-content: center;
+    position: absolute;
+    margin-top: 10px;
+    padding-top: 20px;
+    left: 10%;
+}
+.prize-people{
+    background-image: url("../images/prize_people.png");
+    width: 200px;
+    height: 70px;
+    position: relative;
+    padding-top: -20px;
+    left: 60%;
+}
+
+
+
+
+
+
+#backgroundPopup
+{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #cccccc;
+    border: 1px solid #cecece;
+    z-index: 1;
+}
+#popupContact
+{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    height: 245px;
+    width: 300px;
+    background:#223344;
+    border: 2px solid #cecece;
+    z-index: 2;
+    padding: 12px;
+    font-size: 13px;
+}
+
+#popupContact h1
+{
+    text-align: left;
+    color: #6FA5FD;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 1px dotted #D3D3D3;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+}
+#popupContactClose
+{
+    font-size: 14px;
+    line-height: 14px;
+    right: 6px;
+    top: 4px;
+    position: absolute;
+    color: #6fa5fd;
+    font-weight: 700;
+    display: block;
+}
+
+
+
